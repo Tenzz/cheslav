@@ -1,0 +1,36 @@
+header .container
+    display: flex
+    padding-top: 6px
+    padding-bottom: 6px
+
+.header    
+    &-logo
+        padding-right: 130px
+
+    &-nav
+        display: flex
+        font-family: $f-ubuntu
+        font-size: 16px
+        font-weight: 500
+        margin-right: auto
+
+        &__item
+            margin-right: 30px
+            color: #4F4F4F
+
+            &:last-child
+                margin-right: 0
+
+            a
+                white-space: nowrap
+                vertical-align: middle
+                &:hover
+                    cursor: pointer
+    &-auth
+        .btn
+            width: 70px
+            line-height: 40px
+            background-color: #fff
+            color: $pink
+            border: 2px solid $pink
+            justify-content: flex-end
