@@ -13,23 +13,27 @@ header .container
         font-size: 16px
         font-weight: 500
         margin-right: auto
+        align-items: center
 
         &__item
             margin-right: 30px
             color: #4F4F4F
+            transition: .2s ease
+            &:hover
+                color: $pink
 
             &:last-child
                 margin-right: 0
 
             a
                 white-space: nowrap
-                vertical-align: middle
+                
                 &:hover
                     cursor: pointer
     &-auth
         .btn
             width: 70px
-            line-height: 40px
+            line-height: 36px
             background-color: #fff
             color: $pink
             border: 2px solid $pink

@@ -1,5 +1,5 @@
 .container
-    max-width: 1170px
+    max-width: 1200px
 .btn
     display: block
     text-align: center
@@ -8,5 +8,29 @@
     border-radius: 12px
     font-family: $f-mont
     font-weight: 600
-    line-height: 48px
+    line-height: 44px
     font-size: 16px
+    border: 2px solid $pink
+    transition: .2s ease
+    &:hover
+        background-color: #ffffff
+        color: $pink
+        text-decoration: none
+    &.btn--reverse
+        &:hover
+            background-color: $pink
+            color: #ffffff
+
+
+.section-heading
+
+    &.section-heading--centered
+        text-align: center
+
+    h2
+        font-size: 30px
+        font-family: $f-mont
+        color: #351223
+        font-weight: 600
+        margin: 0
+        line-height: 1.25
