@@ -1,4 +1,6 @@
 .hero
+    position: relative
+
     &__slide
         height: 400px
         position: relative
@@ -37,6 +39,58 @@
         .btn
             width: 270px
             margin-top: 19px
+
+    &__slider
+        .slick-dots
+            position: absolute
+            display: flex
+            left: 50%
+            transform: translateX(-50%)
+            bottom: 23px
+            line-height: 0
+            // height: 8px
+
+            button
+                padding: 0
+                border: 0
+                font-size: 0
+                min-width: 8px
+                min-height: 8px
+                border-radius: 100%
+                margin: 0 10px
+                background-color: rgba(255,255,255,.5)
+                transition: all .2s ease
+                cursor: pointer
+                line-height: 0
+                transform-origin: 50% 50%
+
+                &:hover
+                    transform: scale(1.2)
+                    background-color: #fff
+
+            .slick-active button
+                transform: scale(2)
+                background-color: #fff
+                pointer-events: none
+
+    .hero-slider-progressbar
+        position: absolute
+        left: 0
+        bottom: 0
+        height: 4px
+        width: 100%
+        background-color: red
+        display: block
+
+        &.transition-added span
+            // transition: width 6s linear // - 0.05s 
+        
+        span
+            display: block
+            height: 100%
+            width: 0
+            background-color: #FFD80A
+        
 
 .home__cards
     margin-top: 25px
@@ -80,3 +134,246 @@
                 width: 144px
                 margin-bottom: 24px
                 margin-top: 25px
+
+
+.timeline
+    padding-bottom: 69px
+
+    &__top
+
+        &-container
+            position: relative
+            margin-bottom: 37px
+
+            &:after
+                display: block
+                content: ''
+                border-style: solid
+                border-color: #990026 transparent transparent transparent
+                border-width: 30px 17px 0 17px
+                width: 34px
+                position: absolute
+                left: 50%
+                bottom: -30px
+                transform: translateX(-50%)
+
+        &-slider
+            background: linear-gradient(to top, #990026, #CD2C52)
+
+        &-slide
+            position: relative
+            text-align: center
+            background: linear-gradient(to top, #990026, #CD2C52)
+            outline: none
+
+            &:after,
+            &:before
+                display: block
+                content: ''
+                position: absolute
+                top: 50%
+                left: -107px
+                margin-top: -2px
+                width: 214px
+                height: 4px
+                background-image: url('../img/timeline-slider-dots.svg')
+                background-repeat: no-repeat
+                background-position: 0 50%
+
+            &:after
+                left: auto
+                right: -107px
+
+            &.slick-center span 
+                opacity: 1
+
+            span
+                display: inline-block
+                height: 95px
+                line-height: 95px
+                color: #fff
+                opacity: 0.5
+                transition: opacity .2s
+                font-size: 21px
+                font-family: $f-mont
+                font-weight: 500
+    
+    &__bot
+
+        &-container
+
+        &-slider
+            .slick-arrow
+                width: 51px
+                height: 15px
+                font-size: 0
+                border: 0
+                padding: 0
+                background-color: transparent
+                cursor: pointer
+                background-image: url('../img/timeline-slider-arrow.svg')
+                position: absolute
+                left: 0
+                top: 30px
+                z-index: 1
+                transition: opacity .2s, transform .2s
+
+                &.slick
+                    &-next
+                        transform-origin: 50% 50%
+                        // transform: rotate(180deg)
+                        background-image: url('../img/timeline-slider-arrow--next.svg')
+                        left: auto
+                        right: 0
+                        
+                        &:hover 
+                            transform: translateX(5px)
+
+                    &-prev:hover
+                        transform: translateX(-5px)
+                
+                &.slick-disabled
+                    opacity: 0.4
+                    pointer-events: none
+
+        &-slide
+            opacity: 0
+            transition: opacity .2s
+            outline: none
+
+            &.slick-active
+                opacity: 1
+
+            &-container
+                max-width: 569px
+                margin: 0 auto
+    
+    &__slide
+
+        &-title
+            text-align: center
+            margin-bottom: 20px
+            line-height: 1.4
+
+            span
+                font-size: 60px
+                font-weight: 500
+                color: $pink
+        
+        &-date
+            position: relative
+            height: 137px
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-bottom: 11px
+
+            .bg
+                font-size: 120px
+                color: rgba(236, 17, 63, 0.1)
+                font-weight: 900
+                font-family: $f-mont
+                position: absolute
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+                line-height: 1
+
+            .front
+                font-family: $f-ubuntu
+                font-size: 20px
+                font-weight: 500
+                color: #565656
+
+        &-msg p
+            line-height: 1.5
+            margin-bottom: 0
+
+.diag-form
+    background: linear-gradient(to top, rgba(0,0,0,.05), rgba(0,0,0,0))
+    padding-top: 34px
+    padding-bottom: 58px
+
+    &-container
+        max-width: 470px
+        padding-top: 29px
+        padding-bottom: 23px
+        margin: 0 auto
+        border-radius: 12px
+        background-color: #fff
+        box-shadow: 0 2 10px rgba(0,0,0,.15)
+
+    .section-heading
+        margin-bottom: 45px
+
+    .tabs-content
+        padding-top: 22px
+
+        &__item .btn
+            margin-top: 24px
+            max-width: 226px
+            width: 100%
+
+    .input-group
+        &__label
+            flex-basis: 110px
+            padding-right: 26px
+            text-align: right
+        &__inp
+            background-color: 
+
+            &--small input
+                max-width: 118px
+
+
+.tabs
+    &-container
+        padding: 0 28px
+    &-nav
+
+        &-container
+            display: flex
+            justify-content: space-between
+            border-bottom: 2px solid #F2F2F2
+
+        &__item
+            width: calc(50% - 14px)
+            text-align: center
+
+            a
+                font-size: 20px
+                font-weight: 500
+                color: #565656
+                font-family: $f-ubuntu
+                cursor: pointer
+                display: block
+                line-height: 1.2
+                padding-bottom: 17px
+                position: relative
+                
+                &:after
+                    display: block
+                    content: ''
+                    width: 100%
+                    height: 4px
+                    background-color: $pink
+                    position: absolute
+                    left: 0
+                    bottom: -2px
+                    opacity: 0
+                    transition: opacity .2s
+
+                &:hover:after
+                    opacity: 0.3
+
+                &.active
+                    pointer-events: none
+
+                    &:after
+                        opacity: 1
+
+    &-content
+        &__item
+
+
+
