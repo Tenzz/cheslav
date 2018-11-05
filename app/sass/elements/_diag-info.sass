@@ -1,0 +1,94 @@
+.diagnostics__info
+    padding-top: 32px
+    padding-bottom: 90px
+    
+    &-items
+        margin-top: 87px
+
+        &-row
+            display: flex
+            margin-top: 80px
+
+            &:first-child
+                margin-top: 0
+
+            &.no-show
+                display: none
+
+            .diagnostics
+
+                &-img
+                    min-width: 170px
+                    margin-right: 29px
+
+                    img
+                        margin: 0 auto
+                        display: block
+                        margin-top: 8px
+                
+                &-row
+
+                    &-text p
+                        max-width: 670px
+                        margin-top: 24px
+                        margin-bottom: 0
+                        line-height: 1.45
+
+.check-auto
+    position: relative
+    padding-bottom: 182px
+
+    .tabs
+        &-nav-container
+            max-width: 700px
+            margin: 0 auto
+            color: #565656
+
+        &-container
+            padding: 0
+
+        &-content
+            margin-top: 47px
+
+            &__item
+                width: auto
+                flex: none
+                &-heading h4
+                    font-family: $f-ubuntu
+                    font-size: 20px
+                    font-weight: 500
+                    color: #565656
+                    margin-bottom: 0
+                    line-height: 1.2
+
+                &-list
+
+                    ul
+                        margin-top: 68px
+                    
+                    li
+                        position: relative
+                        margin-left: 12px
+                        line-height: 1
+                        margin-top: 26px
+
+                        &:first-child
+                            margin-top: 0
+
+                        &:before
+                            width: 4px
+                            content: ""
+                            display: block
+                            background-color: #828282
+                            height: 4px
+                            position: absolute
+                            left: -12px
+                            top: 5px
+                            border-radius: 4px
+
+    &-img
+        position: absolute
+        right: 0
+        bottom: 0
+        z-index: -1
+        pointer-events: none

@@ -1,0 +1,95 @@
+.auto-diagnostics
+    margin-bottom: 56px
+    margin-top: 32px
+    
+    &-items
+        display: flex
+
+    &-item
+        &:first-child
+            margin-right: 140px
+
+            .text-heading
+                margin-top: 30px
+
+        .text-heading
+            margin-top: 18px
+
+        &-text
+            margin-top: 38px
+            max-width: 470px
+
+            p
+                margin-bottom: 0
+
+        &-price
+            font-weight: 600
+            margin-top: 36px
+
+        .btn
+            width: 270px
+            margin-top: 30px
+
+        .text-heading a
+            cursor: pointer
+
+        &:last-child
+
+            .text-heading
+                padding-left: 43px
+                position: relative
+                &:before
+                    display: block
+                    content: ""
+                    width: 15px
+                    height: 15px
+                    border-bottom: 2px solid $pink
+                    border-right: 2px solid $pink
+                    position: absolute
+                    transform: rotate(-45deg)
+                    left: 0
+                    top: 5px
+                    transition: .1s ease
+
+
+        
+    &-collapsible
+
+        &-item
+            
+            &:first-child
+                margin-top: 30px
+
+            &.is-collapsed
+
+                .collapsible-text
+                    max-height: 420px
+                    opacity: 1
+                    pointer-events: auto
+                    margin-top: 32px
+
+                    p
+                        margin-bottom: 0
+
+                .text-heading
+
+                    &:before
+                        transform: rotate(45deg)
+                        top: 0
+    
+.collapsible
+
+    &-text 
+        max-height: 0
+        opacity: 0
+        pointer-events: none
+        transition: max-height .2s ease, opacity .2s ease
+
+        .auto-diagnostics-item-price
+            margin-top: 23px
+
+        
+
+
+                
+

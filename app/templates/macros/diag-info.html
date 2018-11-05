@@ -1,0 +1,119 @@
+{% macro diagInfo (showLast) %}
+
+<section class="diagnostics__info">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Как проводим диагностику</h2>
+        </div>
+        <div class="diagnostics__info-items">
+            <div class="diagnostics__info-items-row">
+                <div class="diagnostics-img">
+                    <img src="../img/diagnostics/car-svg1.svg" alt="">
+                </div>
+                <div class="diagnostics-row-content">
+                    <div class="text-heading">
+                        <h3>1. Выезд специалиста</h3>
+                    </div>
+                    <div class="diagnostics-row-text">
+                        <p>Выезд специалиста на место осматриваемого автомобиля в Минске<br>или Минской области</p>
+                    </div>
+                </div>
+            </div>
+            <div class="diagnostics__info-items-row">
+                <div class="diagnostics-img">
+                    <img src="../img/diagnostics/car-svg2.svg" alt="">
+                </div>
+                <div class="diagnostics-row-content">
+                    <div class="text-heading">
+                        <h3>2. Диагностика состояния кузова</h3>
+                    </div>
+                    <div class="diagnostics-row-text">
+                        <p>Визуальный осмотр кузова, выявление дефектов ЛКП, проверка зазоров и швов; Диагностика кузова автомобиля с помощью профессионального толщиномера на предмет окрашенных, отремонтированных и замененных элементов, проверка автомобиля на участие в ДТП;</p>
+                    </div>
+                </div>
+            </div>
+            <div class="diagnostics__info-items-row">
+                <div class="diagnostics-img">
+                    <img src="../img/diagnostics/car-svg3.svg" alt="">
+                </div>
+                <div class="diagnostics-row-content">
+                    <div class="text-heading">
+                        <h3>3. Осмотр и диагностика дигателя и КПП</h3>
+                    </div>
+                    <div class="diagnostics-row-text">
+                        <p>Осмотр подкапотного пространства, измерение уровня технологических жидкостей; Диагностика двигателя на предмет течей, посторонних шумов, износа приводных ремней и ровности работы и тд.; Диагностика КПП как механической и всех типов автоматических;</p>
+                    </div>
+                </div>
+            </div>
+            <div class="diagnostics__info-items-row">
+                <div class="diagnostics-img">
+                    <img src="../img/diagnostics/car-svg4.svg" alt="">
+                </div>
+                <div class="diagnostics-row-content">
+                    <div class="text-heading">
+                        <h3>4. Проверка тормозной системы, подвески, рулевого управления и электроники авто</h3>
+                    </div>
+                    <div class="diagnostics-row-text">
+                        <p>Осмотр документов на автомобиль (ПТС, СТС, сервисной книжки), определение реального количества владельцев, года выпуска, проверка на дубликат и тд.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="diagnostics__info-items-row">
+                <div class="diagnostics-img">
+                    <img src="../img/diagnostics/car-svg5.svg" alt="">
+                </div>
+                <div class="diagnostics-row-content">
+                    <div class="text-heading">
+                        <h3>5. Компьютерная диагностика авто, проверка реального пробега</h3>
+                    </div>
+                    <div class="diagnostics-row-text">
+                        <p>Диагностика кузова автомобиля с помощью профессионального толщиномера. Диагностика двигателя, КПП, подвески, рулевого управления, состояния днищая и пр. Тестдрайв.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="diagnostics__info-items-row">
+                <div class="diagnostics-img">
+                    <img src="../img/diagnostics/car-svg6.svg" alt="">
+                </div>
+                <div class="diagnostics-row-content">
+                    <div class="text-heading">
+                        <h3>6. Осмотр днища и тест-драйв</h3>
+                    </div>
+                    <div class="diagnostics-row-text">
+                        <p>Компьютерная диагностика всех электронных систем автомобиля с помощью профессионального автосканера. Определение факта смотки пробега, определение реального пробега.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="diagnostics__info-items-row">
+                <div class="diagnostics-img">
+                    <img src="../img/diagnostics/car-svg7.svg" alt="">
+                </div>
+                <div class="diagnostics-row-content">
+                    <div class="text-heading">
+                        <h3>7. Проверка документов и юридического статуса авто</h3>
+                    </div>
+                    <div class="diagnostics-row-text">
+                        <p>Осмотр документов на автомобиль (ПТС, СТС, сервисной книжки), определение реального количества владельцев, года выпуска, проверка на дубликат и тд.</p>
+                    </div>
+                </div>
+            </div>
+            {% if showLast %}
+                <div class="diagnostics__info-items-row">
+                    <div class="diagnostics-img">
+                        <img src="../img/diagnostics/car-svg8.svg" alt="">
+                    </div>
+                    <div class="diagnostics-row-content">
+                        <div class="text-heading">
+                            <h3>8. Сертификат профессиональной диагностики авто</h3>
+                        </div>
+                        <div class="diagnostics-row-text">
+                            <p>Осмотр документов на автомобиль (ПТС, СТС, сервисной книжки), определение реального количества владельцев, года выпуска, проверка на дубликат и тд.</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% endmacro %}

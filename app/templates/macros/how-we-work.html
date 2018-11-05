@@ -1,0 +1,21 @@
+{% macro howWeWork (title, body, num) %}
+
+<div class="text-block-item">
+    <div class="text-block-item-heading">
+
+        {% if num %}
+        <div class="text-block-item-number">
+            <h2>{{num}}</h2>
+        </div>
+        {% endif %}
+
+        <div class="text-block-item-heading-text">
+            <a href="#">{{title}}</a>
+        </div>
+    </div>
+    <div class="text-block-item-content">
+        <p>{{body}}</p>
+    </div>
+</div>
+
+{% endmacro %}

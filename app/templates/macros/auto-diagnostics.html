@@ -1,0 +1,43 @@
+{% macro autoDiagnostics (heading1, heading2, heading3) %}
+
+<div class="auto-diagnostics-item">
+    <div class="auto-diagnostics-collapsible-item">
+        <div class="text-heading">
+            <a class="js-collapsible">{{heading1}}</a>
+        </div>
+        <div class="collapsible-text">
+            <p>Полная копмьютерная диагностика<br>
+                - на выезд полная копмьютерная диагностика - на выезд.</p>
+                <div class="auto-diagnostics-item-price js-collapsible">
+                    <span>Всего ХХХ р.</span>
+                </div>
+        </div>
+    </div>
+    <div class="auto-diagnostics-collapsible-item">
+        <div class="text-heading">
+            <a class="js-collapsible">{{heading2}}</a>
+        </div>
+        <div class="collapsible-text">
+                <p>Полная копмьютерная диагностика<br>
+                - на выезд полная копмьютерная диагностика - на выезд.</p>
+                <div class="auto-diagnostics-item-price js-collapsible">
+                    <span>Всего ХХХ р.</span>
+                </div>
+        </div>
+    </div>
+    <div class="auto-diagnostics-collapsible-item">
+        <div class="text-heading">
+            <a class="js-collapsible">{{heading3}}</a>
+        </div>
+        <div class="collapsible-text">
+            <p>Полная копмьютерная диагностика<br>
+            - на выезд полная копмьютерная диагностика - на выезд.</p>
+            <div class="auto-diagnostics-item-price js-collapsible">
+                <span>Всего ХХХ р.</span>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="btn">Подать заявку на осмотр</a>
+</div>
+
+{% endmacro %}

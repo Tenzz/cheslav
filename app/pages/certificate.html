@@ -1,0 +1,117 @@
+---
+title: certificate
+diagTitle: Форма заявки на проведение диагностики
+howWeWorkItems:
+ - title: Осмотр состояния кузова и ЛКП
+   body: Полная копмьютерная диагностика - на выезд полная копмьютерная диагностика - на выезд.
+ - title: Осмотр состояния кузова и ЛКП
+   body: Полная копмьютерная диагностика - на выезд полная копмьютерная диагностика - на выезд.
+ - title: Осмотр состояния кузова и ЛКП
+   body: Полная копмьютерная диагностика - на выезд полная копмьютерная диагностика - на выезд.
+ - title: Осмотр состояния кузова и ЛКП
+   body: Полная копмьютерная диагностика - на выезд полная копмьютерная диагностика - на выезд.
+---
+
+{% extends 'layouts/_layout-main.html' %}
+
+{% import 'macros/diag-info.html' as diagInfo %}
+
+{% import 'macros/how-we-work.html' as howWeWork %}
+
+{% import 'macros/cheslav.html' as cheslav %}
+
+{% import 'macros/diag-section.html' as diag %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero__slider js-hero-slider">
+
+        <div class="hero__slide">
+            <div class="hero__background">
+                <img src="../img/hero_slide.png" alt="">
+            </div>
+            <div class="hero__content">
+                <div class="container">
+                    <h1>Сертификат для продажи авто</h1>
+                    <h2>Полная диагностика по 546 пунктам</h2>
+                    <span>Компьютерная диагностика + осмотр экспертом + отчет</span>
+                    <a href="#" class="btn">Заказать диагностику</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__slide">
+            <div class="hero__background">
+                <img src="../img/hero_slide.png" alt="">
+            </div>
+            <div class="hero__content">
+                <div class="container">
+                    <h1>Сертификат для продажи авто</h1>
+                    <h2>Полная диагностика по 546 пунктам</h2>
+                    <span>Компьютерная диагностика + осмотр экспертом + отчет</span>
+                    <a href="#" class="btn">Заказать диагностику</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__slide">
+            <div class="hero__background">
+                <img src="../img/hero_slide.png" alt="">
+            </div>
+            <div class="hero__content">
+                <div class="container">
+                    <h1>Сертификат для продажи авто</h1>
+                    <h2>Полная диагностика по 546 пунктам</h2>
+                    <span>Компьютерная диагностика + осмотр экспертом + отчет</span>
+                    <a href="#" class="btn">Заказать диагностику</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__slide">
+            <div class="hero__background">
+                <img src="../img/hero_slide.png" alt="">
+            </div>
+            <div class="hero__content">
+                <div class="container">
+                    <h1>Сертификат для продажи авто</h1>
+                    <h2>Полная диагностика по 546 пунктам</h2>
+                    <span>Компьютерная диагностика + осмотр экспертом + отчет</span>
+                    <a href="#" class="btn">Заказать диагностику</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="hero-slider-progressbar">
+        <span></span>
+    </div>
+</section>
+
+{{ diagInfo.diagInfo() }}
+
+{% include 'partials/_car-scheme.html' %}
+
+<section class="warranty text-blocks">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Гарантии</h2>
+        </div>
+        <div class="text-block-container">
+            {% for item in howWeWorkItems %}
+
+            {{ howWeWork.howWeWork(item.title, item.body, item.num) }}
+
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{{ cheslav.cheslavMacro (noShow) }}
+
+{{ diag.diagSection(diagTitle, '', 'at-certificate') }}
+
+{% endblock %}

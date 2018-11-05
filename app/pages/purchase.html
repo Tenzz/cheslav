@@ -1,0 +1,384 @@
+---
+title: purchase
+optionTitle1: Диагностика перед покупкой
+optionTitle2: Юридическая проверка
+optionTitle3: Помощь в покупке нового авто
+diagTitle: Мы проверяем более X авто ежедневно, может среди них уже есть ВАШ авто?
+diagBgClass: diag-form--gradient-bg
+diagText: Сделайте полную диагностику и получите сертификат осмотра вашего авто.  Обоснуйте стоимость, дайте гарантии - и покупатель найдется быстро!
+howWeWorkItems:
+ - title: Осмотр состояния кузова и ЛКП
+   body: Полная копмьютерная диагностика - на выезд полная копмьютерная диагностика - на выезд.
+   num: 1
+ - title: Осмотр состояния кузова и ЛКП
+   body: Полная копмьютерная диагностика - на выезд полная копмьютерная диагностика - на выезд.
+   num: 2
+ - title: Осмотр состояния кузова и ЛКП
+   body: Полная копмьютерная диагностика - на выезд полная копмьютерная диагностика - на выезд.
+   num: 3
+ - title: Осмотр состояния кузова и ЛКП
+   body: Полная копмьютерная диагностика - на выезд полная копмьютерная диагностика - на выезд.
+   num: 4
+---
+
+{% extends 'layouts/_layout-main.html' %}
+
+{% import 'macros/diag-section.html' as diag %}
+
+{% import 'macros/auto-diagnostics.html' as autoDiag %}
+
+{% import 'macros/how-we-work.html' as howWeWork %}
+
+{% import 'macros/cheslav.html' as cheslav %}
+
+{% block content %}
+
+<section class="hero">
+
+        <div class="hero__slider js-hero-slider">
+    
+            <div class="hero__slide">
+                <div class="hero__background">
+                    <img src="../img/hero_slide.png" alt="">
+                </div>
+                <div class="hero__content">
+                    <div class="container">
+                        <h1>Сертификат для продажи авто</h1>
+                        <h2>Полная диагностика по 546 пунктам</h2>
+                        <span>Компьютерная диагностика + осмотр экспертом + отчет</span>
+                        <a href="#" class="btn">Заказать диагностику</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="hero__slide">
+                <div class="hero__background">
+                    <img src="../img/hero_slide.png" alt="">
+                </div>
+                <div class="hero__content">
+                    <div class="container">
+                        <h1>Сертификат для продажи авто</h1>
+                        <h2>Полная диагностика по 546 пунктам</h2>
+                        <span>Компьютерная диагностика + осмотр экспертом + отчет</span>
+                        <a href="#" class="btn">Заказать диагностику</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="hero__slide">
+                <div class="hero__background">
+                    <img src="../img/hero_slide.png" alt="">
+                </div>
+                <div class="hero__content">
+                    <div class="container">
+                        <h1>Сертификат для продажи авто</h1>
+                        <h2>Полная диагностика по 546 пунктам</h2>
+                        <span>Компьютерная диагностика + осмотр экспертом + отчет</span>
+                        <a href="#" class="btn">Заказать диагностику</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="hero__slide">
+                <div class="hero__background">
+                    <img src="../img/hero_slide.png" alt="">
+                </div>
+                <div class="hero__content">
+                    <div class="container">
+                        <h1>Сертификат для продажи авто</h1>
+                        <h2>Полная диагностика по 546 пунктам</h2>
+                        <span>Компьютерная диагностика + осмотр экспертом + отчет</span>
+                        <a href="#" class="btn">Заказать диагностику</a>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="hero-slider-progressbar">
+            <span></span>
+        </div>
+    </section>
+
+<section class="service-info">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Подробнее об услуге</h2>
+        </div>
+        <div class="service-container">
+            <div class="service-content">
+                <div class="service-content-item">
+                    <a href="#">Поиск по открытым и закрытым базам</a>
+                </div>
+                <div class="service-content-item">
+                    <a href="#">Работа до результата</a>
+                </div>
+                <div class="service-content-item">
+                    <a href="#">Договор с юр. лицом</a>
+                </div>
+                <div class="service-content-item">
+                    <a href="#">Гарантия лучшего автомобиля</a>
+                </div>
+                <div class="service-content-item">
+                    <a href="#">Сопровождение сделки</a>
+                </div>
+                <div class="service-content-item">
+                    <a href="#">Техническая проверка</a>
+                </div>
+                <div class="service-content-item">
+                    <a href="#">Компьютерная диагностика</a>
+                </div>
+            </div>
+            <div class="service-content">
+                    <div class="service-content-item">
+                        <a href="#">Юридическая проверка</a>
+                    </div>
+                    <div class="service-content-item">
+                        <a href="#">Проверка VIN и маркеровок</a>
+                    </div>
+                    <div class="service-content-item">
+                        <a href="#">Проверка документов</a>
+                    </div>
+                    <div class="service-content-item">
+                        <a href="#">Рекомендации и советы</a>
+                    </div>
+                    <div class="service-content-item">
+                        <a href="#">Встреча и проводы</a>
+                    </div>
+                    <div class="service-content-item">
+                        <a href="#">100% возврат средств, если авто не найдено</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="how-we-work text-blocks">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Как мы работаем</h2>
+        </div>
+        <div class="text-block-container">
+            {% for item in howWeWorkItems %}
+
+            {{ howWeWork.howWeWork(item.title, item.body, item.num) }}
+
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+<section class="custom-buy">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Покупка авто “под ключ”</h2>
+        </div>
+        <div class="custom-buy-content">
+            <!-- <div class="custom-buy-block">
+                <div class="custom-buy-item">
+                    <div class="custom-buy-item-heading">
+                        <h3>Время</h3>
+                    </div>
+                    <div class="custom-buy-item-text">
+                        <p>Экономия времени на поиски, звонки и просмотры неподходящих вариантов</p>
+                    </div>
+                </div>
+                <div class="custom-buy-item">
+                    <div class="custom-buy-item-heading">
+                        <h3>Безопасность и гарантии</h3>
+                    </div>
+                    <div class="custom-buy-item-text">
+                        <p>Проверяем не только состояние авто, но и его юр. историю. Даем гарантии (линк на блок с гарантиями)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-buy-block">
+                <div class="custom-buy-item">
+                    <div class="custom-buy-item-heading">
+                        <h3>Деньги</h3>
+                    </div>
+                    <div class="custom-buy-item-text">
+                        <p>Знаем рыночные цены и делаем полный осмотр авто (внешний осмотр, тест-драйв, диагностика кузова). Мастерски торгуемся за вас.</p>
+                    </div>
+                </div>
+                <div class="custom-buy-item">
+                    <div class="custom-buy-item-heading">
+                        <h3>Удобство</h3>
+                    </div>
+                    <div class="custom-buy-item-text">
+                        <p>Ведем поиск самостоятельно, клиента приглашаем только на предварительно согласованный окончательный осмотр</p>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="custom-buy-block">
+                <div class="custom-buy-block-row">
+                    <div class="custom-buy-item">
+                    <div class="custom-buy-item-heading">
+                        <h3>Деньги</h3>
+                    </div>
+                    <div class="custom-buy-item-text">
+                        <p>Знаем рыночные цены и делаем полный осмотр авто (внешний осмотр, тест-драйв, диагностика кузова). Мастерски торгуемся за вас.</p>
+                    </div>
+                </div>
+                </div>
+                <div class="custom-buy-block-row"></div>
+            </div> -->
+            <div class="custom-buy-block">
+                <div class="custom-buy-block-row">
+                    <div class="custom-buy-item">
+                        <div class="custom-buy-item-heading">
+                            <h3>Время</h3>
+                        </div>
+                        <div class="custom-buy-item-text">
+                            <p>Экономия времени на поиски, звонки и просмотры неподходящих вариантов</p>
+                        </div>
+                    </div>
+                    <div class="custom-buy-item">
+                        <div class="custom-buy-item-heading">
+                            <h3>Деньги</h3>
+                        </div>
+                        <div class="custom-buy-item-text">
+                            <p>Знаем рыночные цены и делаем полный осмотр авто (внешний осмотр, тест-драйв, диагностика кузова). Мастерски торгуемся за вас.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-buy-block-row">  
+                    <div class="custom-buy-item">
+                        <div class="custom-buy-item-heading">
+                            <h3>Безопасность и гарантии</h3>
+                        </div>
+                        <div class="custom-buy-item-text">
+                            <p>Проверяем не только состояние авто, но и его юр. историю. Даем гарантии (линк на блок с гарантиями)</p>
+                        </div>
+                    </div>  
+                    <div class="custom-buy-item">
+                        <div class="custom-buy-item-heading">
+                            <h3>Удобство</h3>
+                        </div>
+                        <div class="custom-buy-item-text">
+                            <p>Ведем поиск самостоятельно, клиента приглашаем только на предварительно согласованный окончательный осмотр</p>
+                        </div>
+                    </div>          
+                </div>
+            </div>
+            <div class="custom-buy-block">
+                <div class="custom-buy-block-heading">
+                    <h3>А также:</h3>
+                </div>
+                {{ autoDiag.autoDiagnostics(optionTitle1, optionTitle2, optionTitle3)}}
+            </div>
+        </div>
+    </div>  
+</section>
+
+<section class="guarantees">
+    <div class="container">
+        <div class="tabs-container">
+            <div class="tabs-nav">
+                <div class="tabs-nav-container">
+                    <div class="tabs-nav__item">
+                        <a class="active js-toggle-tab">Мы гарантируем</a>
+                    </div>
+
+                    <div class="tabs-nav__item">
+                        <a class="js-toggle-tab">Проблемы при самостоятельной покупке</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs-content">
+
+                <div class="tabs-content__item  tabs-content__item--diag--check">
+                    <div class="tabs-content__item-list">
+                        <div class="tabs-content__item-list-block">
+                            <div class="tabs-content__item-list-block-heading">
+                                <h3>Осмотр состояния кузова и ЛКП</h3>
+                            </div>
+                            <div class="tabs-content__item-list-block-text">
+                                <p>Полная копмьютерная диагностика
+                                        - на выезд полная копмьютерная диагностика - на выезд.</p>
+                            </div>
+                    </div>
+                        <div class="tabs-content__item-list-block">
+                                <div class="tabs-content__item-list-block-heading">
+                                    <h3>Осмотр состояния кузова и ЛКП</h3>
+                                </div>
+                                <div class="tabs-content__item-list-block-text">
+                                    <p>Полная копмьютерная диагностика
+                                            - на выезд полная копмьютерная диагностика - на выезд.</p>
+                                </div>
+                            </div>
+                        <div class="tabs-content__item-list-block">
+                                <div class="tabs-content__item-list-block-heading">
+                                    <h3>Осмотр состояния кузова и ЛКП</h3>
+                                </div>
+                                <div class="tabs-content__item-list-block-text">
+                                    <p>Полная копмьютерная диагностика
+                                            - на выезд полная копмьютерная диагностика - на выезд.</p>
+                                </div>
+                        </div>
+                        <div class="tabs-content__item-list-block">
+                                <div class="tabs-content__item-list-block-heading">
+                                    <h3>Осмотр состояния кузова и ЛКП</h3>
+                                </div>
+                                <div class="tabs-content__item-list-block-text">
+                                    <p>Полная копмьютерная диагностика
+                                            - на выезд полная копмьютерная диагностика - на выезд.</p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="tabs-content__item  tabs-content__item--diag--check" style="display: none">
+                        <div class="tabs-content__item-list">
+                            <div class="tabs-content__item-list-block">
+                                <div class="tabs-content__item-list-block-heading">
+                                    <h3>2Осмотр состояния кузова и ЛКП</h3>
+                                </div>
+                                <div class="tabs-content__item-list-block-text">
+                                    <p>2Полная копмьютерная диагностика
+                                            - на выезд полная копмьютерная диагностика - на выезд.</p>
+                                </div>
+                            </div>
+                            <div class="tabs-content__item-list-block">
+                                    <div class="tabs-content__item-list-block-heading">
+                                        <h3>Осмотр состояния кузова и ЛКП</h3>
+                                    </div>
+                                    <div class="tabs-content__item-list-block-text">
+                                        <p>2Полная копмьютерная диагностика
+                                                - на выезд полная копмьютерная диагностика - на выезд.</p>
+                                    </div>
+                            </div>
+                            <div class="tabs-content__item-list-block">
+                                    <div class="tabs-content__item-list-block-heading">
+                                        <h3>2Осмотр состояния кузова и ЛКП</h3>
+                                    </div>
+                                    <div class="tabs-content__item-list-block-text">
+                                        <p>2Полная копмьютерная диагностика
+                                                - на выезд полная копмьютерная диагностика - на выезд.</p>
+                                    </div>
+                            </div>
+                            <div class="tabs-content__item-list-block">
+                                    <div class="tabs-content__item-list-block-heading">
+                                        <h3>Осмотр состояния кузова и ЛКП</h3>
+                                    </div>
+                                    <div class="tabs-content__item-list-block-text">
+                                        <p>Полная копмьютерная диагностика
+                                                - на выезд полная копмьютерная диагностика - на выезд.</p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{{ diag.diagSection(diagTitle, diagBgClass,'at-purchase', diagText) }}
+
+{{ cheslav.cheslavMacro () }}
+
+{% endblock %}

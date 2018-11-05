@@ -1,0 +1,65 @@
+{% extends 'layouts/_layout-main.html' %}
+
+{% import 'macros/cheslav.html' as cheslav %}
+
+{% block content %}
+
+<div class="container">
+    <div class="tabs-container">
+        <div class="tabs-nav">
+            <div class="tabs-nav-container">
+                <div class="tabs-nav__item">
+                    <a class="active js-toggle-tab">О компании</a>
+                </div>
+
+                <div class="tabs-nav__item">
+                    <a class="js-toggle-tab">Контакты</a>
+                </div>
+                
+                <div class="tabs-nav__item">
+                    <a class="active js-toggle-tab">Вакансии</a>
+                </div>
+                
+                <div class="tabs-nav__item">
+                    <a class="active js-toggle-tab">Полезная информация</a>
+                </div>
+                
+                <div class="tabs-nav__item">
+                    <a class="active js-toggle-tab">Отзывы</a>
+                </div>
+                
+                <div class="tabs-nav__item">
+                    <a class="active js-toggle-tab">Кейсы</a>
+                </div>
+                
+                <div class="tabs-nav__item">
+                    <a class="active js-toggle-tab">Партнеры</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabs-content">
+
+            <div class="tabs-content__item  tabs-content__item--diag--check">
+                <div class="tabs-content__item-list">
+                    <div class="tabs-content__item-list-block">
+                        {{ cheslav.cheslavMacro () }}
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="tabs-content__item  tabs-content__item--diag--check" style="display: none">
+                    <div class="tabs-content__item-list">
+                        <div class="tabs-content__item-list-block">
+                            {{ cheslav.cheslavMacro () }}
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+{% endblock %}
