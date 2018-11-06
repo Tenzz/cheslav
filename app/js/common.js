@@ -3,18 +3,17 @@ var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAni
 
 var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
-var heroProgressbarRAF = null;
-
 $(function() {
 
 	// Custom JS
 
 	//hero slider
 
-	var $heroSlider = $('.js-hero-slider');
-
+	var heroProgressbarRAF = null;
 	var $progressBar = $('.hero-slider-progressbar'),
 		$progressEl  = $progressBar.find('span');
+
+	var $heroSlider = $('.js-hero-slider');
 
 
 	function heroProgressbarPlay() {
@@ -28,7 +27,7 @@ $(function() {
 			// console.log(progress)
 			$progressEl.css('width', Math.min(progress / 60) +  '%');
 		  if (progress < 6000) {
-			window.requestAnimationFrame(step);
+			heroProgressbarRAF = window.requestAnimationFrame(step);
 		  } else {
 			$heroSlider.slick('slickNext')
 		  }
@@ -39,14 +38,15 @@ $(function() {
 	}
 
 	function heroProgressbarReset() {
-		console.log('hero progress reset');
+		// console.log('hero progress reset');
 		cancelAnimationFrame(heroProgressbarRAF);
 		heroProgressbarRAF = null;
 		$progressEl.removeAttr('style');
 	}
 	
+	
 	$heroSlider.on('init', function(event, slick, currentSlide, nextSlide) {
-		// heroProgressbarPlay();
+		heroProgressbarPlay();
 	});
 
 	$heroSlider.slick({
@@ -58,19 +58,18 @@ $(function() {
 	});
 
 	$('.js-hero-slider .slick-dots button').on('click', function() {
-		console.log('arrow-click');
+		// console.log('arrow-click');
 		heroProgressbarReset();
 	});
 
 	$heroSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-		console.log('[hero] before change');
-		// heroProgressbarReset();
+		// console.log('[hero] before change');
+		heroProgressbarReset();
 	});
 
 	$heroSlider.on('afterChange', function(event, slick, currentSlide, nextSlide) {
-		console.log('[hero] after change');
-
-		// heroProgressbarPlay();
+		// console.log('[hero] after change');
+		heroProgressbarPlay();
 	});
 	
 	
